@@ -1,27 +1,23 @@
-#include "main.h"
+#include "holberton.h"
+#include "2-strlen.c"
 
 /**
- * puts_half - prints half of a string.
- * @str: input string.
- * Return: no return.
+ * puts_half - puts half of int
+ *
+ * @str: string to split
  */
 void puts_half(char *str)
 {
-	int count = 0, i;
+	int i;
+	int oE = 0;
 
-	while (count >= 0)
+	if (_strlen(str) % 2 != 0)
 	{
-		if (str[count] == '\0')
-			break;
-		count++;
+		oE += 1;
 	}
-
-	if (count % 2 == 1)
-		i = count / 2;
-	else
-		i = (count - 1) / 2;
-
-	for (i++; i < count; i++)
+	for (i = (_strlen(str) + oE) / 2; i < _strlen(str); i++)
+	{
 		_putchar(str[i]);
+	}
 	_putchar('\n');
 }
