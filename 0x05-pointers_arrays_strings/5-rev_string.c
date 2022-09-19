@@ -1,22 +1,30 @@
-#include <stdio.h>
-#include "main.h"
+#include "holberton.h"
 
 /**
- * puts2 - prints every other character
- * @str: string
- *
- * Return: nothing
+ * rev_string - reverses a string.
+ * @s: input string.
+ * Return: no return.
  */
-
-void puts2(char *str)
+void rev_string(char *s)
 {
-	int i = 0;
-	
-	while (*(str + i) != '\0')
+	int count = 0, i, j;
+	char *str, temp;
+
+	while (count >= 0)
 	{
-		if (i % 2 == 0)
-			putchar(*(str + i));
-		i++;
+		if (s[count] == '\0')
+			break;
+		count++;
 	}
-	putchar(10);
+	str = s;
+
+	for (i = 0; i < (count - 1); i++)
+	{
+		for (j = i + 1; j > 0; j--)
+		{
+			temp = *(str + j);
+			*(str + j) = *(str + (j - 1));
+			*(str + (j - 1)) = temp;
+		}
+	}
 }
