@@ -1,5 +1,4 @@
-#include "holberton.h"
-#include "2-strlen.c"
+#include "main.h"
 
 /**
  * puts_half - puts half of int
