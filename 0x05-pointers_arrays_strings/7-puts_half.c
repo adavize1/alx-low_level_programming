@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "7-main.c"
 /**
  * puts_half - puts half of int
  *
